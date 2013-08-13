@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="13A497d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Yf0-bD-0Qm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Yf0-bD-0Qm">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -33,32 +33,38 @@
                                     <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="AIN-12-otv">
                                         <rect key="frame" x="20" y="38" width="144" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
                                         <state key="normal" title="Bắt đầu chơi" backgroundImage="button_intro.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.18460238230000001" green="0.3477050746" blue="0.98078719430000005" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="NSh-xO-PEk" kind="push" id="eIj-Oz-eWt"/>
+                                            <action selector="doStartGame:" destination="2" eventType="touchUpInside" id="IAi-Pp-2UU"/>
                                         </connections>
                                     </button>
                                     <button contentMode="scaleAspectFit" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="WKj-CS-oOH">
                                         <rect key="frame" x="20" y="90" width="144" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
                                         <state key="normal" title="Hướng dẫn" backgroundImage="button_intro.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.18460238230000001" green="0.3477050746" blue="0.98078719430000005" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="doShowGuide:" destination="2" eventType="touchUpInside" id="DoB-sq-STp"/>
+                                        </connections>
                                     </button>
                                     <button contentMode="scaleAspectFit" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="J5J-gM-NAP">
                                         <rect key="frame" x="20" y="142" width="144" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
                                         <state key="normal" title="Thông tin" backgroundImage="button_intro.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.18460238230000001" green="0.3477050746" blue="0.98078719430000005" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="doShowAbout:" destination="2" eventType="touchUpInside" id="D5S-da-dBq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -86,21 +92,99 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nI5-zk-a9g">
-                                <rect key="frame" x="6" y="5" width="42" height="42"/>
+                            <view contentMode="scaleToFill" id="PYu-Tx-dUe">
+                                <rect key="frame" x="6" y="20" width="308" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="button_back.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="2" kind="push" id="slB-gd-HQ8"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fEp-9e-tH7">
+                                        <rect key="frame" x="0.0" y="50" width="70" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="button_5050_on.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doHelp5050:" destination="NSh-xO-PEk" eventType="touchUpInside" id="JLv-nB-tlK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KBy-vL-NKy">
+                                        <rect key="frame" x="78" y="50" width="70" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="button_call_on.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doHelpCall:" destination="NSh-xO-PEk" eventType="touchUpInside" id="nL5-4Y-gAA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QFE-0i-GuY">
+                                        <rect key="frame" x="156" y="50" width="70" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="button_audience_on.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doHelpAudience:" destination="NSh-xO-PEk" eventType="touchUpInside" id="aLZ-hp-W16"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fA2-Po-oj8">
+                                        <rect key="frame" x="234" y="50" width="74" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="button_stop_session.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doHelpStopSession:" destination="NSh-xO-PEk" eventType="touchUpInside" id="md0-qu-9e2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nI5-zk-a9g">
+                                        <rect key="frame" x="-13" y="5" width="70" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" image="button_back.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doBackToMain:" destination="NSh-xO-PEk" eventType="touchUpInside" id="PeG-hp-LiI"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="button_core.png" id="lAs-0G-aNp">
+                                        <rect key="frame" x="86" y="12" width="222" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0 VNĐ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iY9-F4-5Mn">
+                                        <rect key="frame" x="109" y="13" width="182" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.020870120548229565" blue="0.1035024298631847" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <view autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" id="2H8-eo-mW3">
                                 <rect key="frame" x="0.0" y="120" width="320" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -109,17 +193,17 @@
                                         <rect key="frame" x="0.0" y="-53" width="320" height="202"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
-                                    <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="Question title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cfX-DE-BPg">
-                                        <rect key="frame" x="45" y="14" width="230" height="21"/>
+                                    <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cfX-DE-BPg">
+                                        <rect key="frame" x="45" y="8" width="230" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Question content" textAlignment="center" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" id="3h6-of-U4W">
-                                        <rect key="frame" x="35" y="29" width="250" height="53"/>
+                                    <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" adjustsFontSizeToFit="NO" id="3h6-of-U4W">
+                                        <rect key="frame" x="35" y="26" width="250" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -134,8 +218,8 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="7EL-on-mWx">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                                        <state key="normal" title="                    A. " backgroundImage="button_answer.png">
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                        <state key="normal" backgroundImage="button_answer.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" red="0.18460238230000001" green="0.3477050746" blue="0.98078719430000005" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -149,8 +233,8 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="03U-Kh-muE">
                                         <rect key="frame" x="0.0" y="38" width="320" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                                        <state key="normal" title="                    B. " backgroundImage="button_answer.png">
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                        <state key="normal" backgroundImage="button_answer.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" red="0.18460238230000001" green="0.3477050746" blue="0.98078719430000005" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -164,8 +248,8 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="irq-oW-GBh">
                                         <rect key="frame" x="0.0" y="76" width="320" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                                        <state key="normal" title="                    C. " backgroundImage="button_answer.png">
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                        <state key="normal" backgroundImage="button_answer.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" red="0.18460238230000001" green="0.3477050746" blue="0.98078719430000005" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -179,8 +263,8 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="ATw-TX-Gw1">
                                         <rect key="frame" x="0.0" y="114" width="320" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                                        <state key="normal" title="                    D. " backgroundImage="button_answer.png">
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                        <state key="normal" backgroundImage="button_answer.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" red="0.18460238230000001" green="0.3477050746" blue="0.98078719430000005" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -207,6 +291,10 @@
                         <outlet property="answerCButton" destination="irq-oW-GBh" id="7XP-Ex-6b9"/>
                         <outlet property="answerDButton" destination="ATw-TX-Gw1" id="k6d-ZL-59S"/>
                         <outlet property="answerView" destination="3DM-Nu-eQV" id="XSJ-uo-b6r"/>
+                        <outlet property="help5050Button" destination="fEp-9e-tH7" id="Rs9-tF-9i3"/>
+                        <outlet property="helpAudienceButton" destination="QFE-0i-GuY" id="1ac-1G-gqn"/>
+                        <outlet property="helpCallButton" destination="KBy-vL-NKy" id="91I-Jr-Iqi"/>
+                        <outlet property="moneyLabel" destination="iY9-F4-5Mn" id="NtI-M2-zSM"/>
                         <outlet property="questionContentLabel" destination="3h6-of-U4W" id="2J6-yW-jq7"/>
                         <outlet property="questionTitleLabel" destination="cfX-DE-BPg" id="Vbb-1F-nDJ"/>
                         <outlet property="questionView" destination="2H8-eo-mW3" id="9ib-RT-HI3"/>
@@ -243,19 +331,57 @@
         <image name="background_main.png" width="480" height="680"/>
         <image name="background_playing.png" width="480" height="680"/>
         <image name="background_question.png" width="435" height="119"/>
+        <image name="button_5050_on.png" width="72" height="59"/>
         <image name="button_answer.png" width="480" height="41"/>
+        <image name="button_audience_on.png" width="72" height="59"/>
         <image name="button_back.png" width="54" height="63"/>
+        <image name="button_call_on.png" width="72" height="59"/>
+        <image name="button_core.png" width="305" height="86"/>
         <image name="button_intro.png" width="200" height="36"/>
+        <image name="button_stop_session.png" width="42" height="42"/>
         <image name="logo_full.png" width="285" height="285"/>
         <image name="logo_text.png" width="285" height="285"/>
         <image name="logo_turning.png" width="285" height="285"/>
     </resources>
+    <classes>
+        <class className="PlayingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayingViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doAnswerA:"/>
+                <relationship kind="action" name="doAnswerB:"/>
+                <relationship kind="action" name="doAnswerC:"/>
+                <relationship kind="action" name="doAnswerD:"/>
+                <relationship kind="action" name="doBackToMain:"/>
+                <relationship kind="action" name="doHelp5050:"/>
+                <relationship kind="action" name="doHelpAudience:"/>
+                <relationship kind="action" name="doHelpCall:"/>
+                <relationship kind="action" name="doHelpStopSession:"/>
+                <relationship kind="outlet" name="answerAButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answerBButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answerCButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answerDButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answerView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="help5050Button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="helpAudienceButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="helpCallButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="moneyLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="questionContentLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="questionTitleLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="questionView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doShowAbout:"/>
+                <relationship kind="action" name="doShowGuide:"/>
+                <relationship kind="action" name="doStartGame:"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="slB-gd-HQ8"/>
-    </inferredMetricsTieBreakers>
 </document>

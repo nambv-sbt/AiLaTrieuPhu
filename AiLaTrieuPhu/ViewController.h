@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Common.h"
 
 @interface ViewController : UIViewController
+
+- (IBAction)doStartGame:(id)sender;
+- (IBAction)doShowGuide:(id)sender;
+- (IBAction)doShowAbout:(id)sender;
+- (void)pushViewToPlayingView;
 
 @end

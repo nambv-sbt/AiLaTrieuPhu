@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Common.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UIAlertViewDelegate, AVAudioPlayerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+- (void)blinkAnswerButton;
 
 @end

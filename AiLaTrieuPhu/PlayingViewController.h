@@ -7,19 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Constant.h"
 #import "Common.h"
 
-@interface PlayingViewController : UIViewController <UIAlertViewDelegate>
+@interface PlayingViewController : UIViewController
 
-@property (strong, nonatomic) NSTimer           *timer;
-@property (nonatomic)         int               timerCount;
-@property (strong, nonatomic) NSString          *timerID;
-@property (strong, nonatomic) NSString          *answerID;
-@property (nonatomic)         int               buttonBlinking;
-@property (nonatomic)         BOOL              blockControl;
-@property (strong, nonatomic) NSString          *animationString;
-@property (strong, nonatomic) UIAlertView       *alertView;
+
 @property (strong, nonatomic) IBOutlet UIView   *questionView;
 @property (strong, nonatomic) IBOutlet UIView   *answerView;
 @property (strong, nonatomic) IBOutlet UILabel  *questionTitleLabel;
@@ -28,9 +20,20 @@
 @property (strong, nonatomic) IBOutlet UIButton *answerBButton;
 @property (strong, nonatomic) IBOutlet UIButton *answerCButton;
 @property (strong, nonatomic) IBOutlet UIButton *answerDButton;
+@property (strong, nonatomic) IBOutlet UILabel *moneyLabel;
+@property (strong, nonatomic) IBOutlet UIButton *help5050Button;
+@property (strong, nonatomic) IBOutlet UIButton *helpCallButton;
+@property (strong, nonatomic) IBOutlet UIButton *helpAudienceButton;
 
 - (IBAction)doAnswerA:(id)sender;
 - (IBAction)doAnswerB:(id)sender;
 - (IBAction)doAnswerC:(id)sender;
 - (IBAction)doAnswerD:(id)sender;
+- (IBAction)doBackToMain:(id)sender;
+- (IBAction)doHelp5050:(id)sender;
+- (IBAction)doHelpCall:(id)sender;
+- (IBAction)doHelpAudience:(id)sender;
+- (IBAction)doHelpStopSession:(id)sender;
+
+
 @end
